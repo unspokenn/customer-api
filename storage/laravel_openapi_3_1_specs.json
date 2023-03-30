@@ -1,0 +1,62 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "darius@matulionis.lt"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://www.apache.org",
+            "description": "L5 Swagger OpenApi description"
+        },
+        {
+            "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml",
+            "description": "Production Url",
+            "variables": {
+                "basePath": {
+                    "default": "v1",
+                    "description": "API v1"
+                }
+            }
+        },
+        {
+            "url": "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml",
+            "description": "Development Url",
+            "variables": {
+                "basePath": {
+                    "default": "v1",
+                    "description": "API v1"
+                }
+            }
+        }
+    ],
+    "paths": {
+        "/": {}
+    },
+    "components": {
+        "securitySchemes": {
+            "sanctum": {
+                "type": "apiKey",
+                "description": "Enter token in format (Bearer <token>)",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "sanctum": []
+        }
+    ]
+}

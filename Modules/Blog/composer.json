@@ -1,0 +1,23 @@
+{
+    "name": "unspokenn/blog",
+    "description": "",
+    "authors": [
+        {
+            "name": "Sadık Ergüven",
+            "email": "unspokenn@protonmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Blog\\": ""
+        }
+    }
+}

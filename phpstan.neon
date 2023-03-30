@@ -1,0 +1,36 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 9 is the highest level
+    level: 5
+
+#    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+#
+#    checkMissingIterableValueType: false
+    ignoreErrors:
+        - '#PHPDoc tag @var#'
+        - '#Call to an undefined method Illuminate\\Contracts\\Validation\\Validator::[a-zA-Z0-9\\_]()#'
+        - '#Call to an undefined method Illuminate\\Foundation\\Auth\\User::[a-zA-Z0-9\\_]()#'
+        - '#Call to an undefined method Illuminate\\Http\\Request::[a-zA-Z0-9\\_]()#'
+        - '#Call to an undefined method Illuminate\\Auth\\RequestGuard::[a-zA-Z0-9\\_]()#'
+        - "#\\(void\\) is used#"
+        - "#Access to undefined constant#"
+        - "#Access to an undefined property#"
+        - "#Call to an undefined method#"
+        - "#but return statement is missing.#"
+        - "#Caught class [a-zA-Z0-9\\\\_]+ not found.#"
+        - "#Class [a-zA-Z0-9\\\\_]+ not found.#"
+        - "#has invalid type#"
+        - "#should always throw an exception or terminate script execution#"
+        - "#Function GuzzleHttp\\\\Psr7#"
+        - "#Instantiated class [a-zA-Z0-9\\\\_]+ not found.#"
+        - "#Unsafe usage of new static#"
